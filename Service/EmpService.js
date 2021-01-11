@@ -14,15 +14,29 @@ class EmpService {
         }
     }
 
-    getEmployeesService = (req, next) => {
+    getEmployeesService = (req) => {
         try {
+            let object={}
             return employeeModel.read().then((result) => {
                 return ({ message: "records Found !", data: result, flag: true, code: 200 })
             }).catch((err) => {
                 return ({ message: "No records found !",data:err, flag: false, code: 206 })
             })
         } catch (error) {
-             next(error);
+        }
+    }
+
+    getByIdEmployeeService = (req) => {
+        try {
+            let request = {
+                "_id":req.params.id
+            }
+            return employeeModel.read(request).then((result) => {
+                return ({ message: "records Found by id !", data: result, flag: true, code: 200 })
+            }).catch((err) => {
+                return ({ message: "No records found by id!",data:err, flag: false, code: 206 })
+            })
+        } catch (error) {
         }
     }
     updateEmployeeService = (req) => {
