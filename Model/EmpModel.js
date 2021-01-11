@@ -62,8 +62,21 @@ class EmpModel{
         }
     }
 
-    
+    update = (req) => {
+        try {
 
+                return new Promise((resolve, reject) => {
+                    model.findByIdAndUpdate(req.id,req.data1).then((result) => {
+                        resolve(result)
+                    }).catch((error) => {
+                        reject(error)
+                    })
+                })
+            }catch (error) {
+        }
+    }
+
+    
 }
 
 

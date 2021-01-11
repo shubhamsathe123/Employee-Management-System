@@ -25,8 +25,23 @@ class EmpService {
              next(error);
         }
     }
-    
+    updateEmployeeService = (req) => {
+        try {
+            let id=req.params.id;
+            let employeeData={
+                   id,data1:req.body
+            }
+            return employeeModel.update(employeeData).then((result) => {
+                return ({ message: "Employee records Updated !", data: result })
+            }).catch((error) => {
+                return ({ message: "Failed to update record !", error: error })
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
+    
 }
 
 module.exports = new EmpService();
