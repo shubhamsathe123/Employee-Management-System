@@ -41,7 +41,19 @@ class EmpService {
         }
     }
 
-    
+    deleteEmployeeService = (req, next) => {
+        try {
+            
+            return employeeModel.delete(req, next).then((result) => {
+                return ({ message: "Employee record deleted !", flag: true, code: 200, data: result })
+            }).catch((err) => {
+                return ({ message: "failed to delete data", flag: false, code: 206, data: err })
+            })
+        } catch (error) {
+            next(error);
+        }
+    }
+
 }
 
 module.exports = new EmpService();

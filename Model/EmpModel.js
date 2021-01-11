@@ -76,7 +76,20 @@ class EmpModel{
         }
     }
 
-    
+    delete = (req, error) => {
+        try {
+            return new Promise((resolve, reject) => {
+                model.findByIdAndDelete(req.params.id).then((result) => {
+                    resolve(result)
+                }).catch((error) => {
+                    reject(error)
+                })
+            })
+        } catch (err) {
+            error(err)
+        }
+    }
+
 }
 
 
