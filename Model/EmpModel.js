@@ -48,6 +48,20 @@ class EmpModel{
         }
     }
 
+    read = (req, error) => {
+        try {
+            return new Promise((resolve, reject) => {
+                model.find(req).then((result) => {
+                    resolve(result)
+                }).catch((error) => {
+                    reject(error)
+                })
+            })
+        } catch (err) {
+            error(err)
+        }
+    }
+
     
 
 }
