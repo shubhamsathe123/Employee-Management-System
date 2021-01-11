@@ -34,6 +34,20 @@ let model = mongoose.model('samples', schema)
 
 class EmpModel{
 
+    create = (req, error) => {
+        try {
+            return new Promise((resolve, reject) => {
+                model.create(req).then((result) => {
+                    resolve(result)
+                }).catch((error) => {
+                    reject(error)
+                })
+            })
+        } catch (err) {
+            error(err)
+        }
+    }
+
     
 
 }
