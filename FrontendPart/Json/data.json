@@ -1,0 +1,20 @@
+[
+    {
+        "firstName": "Shubham",
+        "lastName": "Sathe",
+        "mobNo": "9405005055",
+        "emailId": "abc.xyz@bl.co.in",
+        "designation": "Fresher",
+        "company":"Na"
+    },
+
+    {
+        "firstName": "Rohit",
+        "lastName": "Rathod",
+        "mobNo": "9888654321" ,
+        "emailId": "cdf.xyz@bl.co.in",
+        "designation": "QualityAnalyst",
+        "company":"Infosys"
+    }
+]
+

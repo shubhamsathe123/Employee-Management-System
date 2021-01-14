@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>AddEmployee</title>
+    <link rel="stylesheet" href="../Css/addEmpStyle.css">
+    <script src='../Js/validate.js'></script>
+    
+</head>
+
+<body >   
+<form onsubmit="return validate()">
+  <div class="wrapper">   
+      <h1 class="main">Add Employee</h1>
+    <div class="form-row">
+      <input type="text" maxlength="20" placeholder="Enter first name" name="fname" id="fname" required>
+      <span id="firstnameerror"></span>
+    </div>
+    <div class="form-row">
+          <input type="text" maxlength="20" placeholder="Enter last name" name="lname" id="lname" required>
+          <span id="lastnameerror"></span>
+    </div>
+    <div class="form-row">
+          <input type="number" maxlength="13" placeholder="Enter mobile number" name="mob" id="mob" required>
+          <span id="phonenumerror"></span>
+    </div>
+    <div class="form-row">
+      <input type="text" maxlenght="100" placeholder="Enter Email" name="email" id="email" required>
+      <span id="emailerror"></span>
+    </div>
+     <div class="form-row">
+      <input type="text" maxlenght="20" placeholder="Enter designation" name="desig" id="desig" required>
+      <span id="desigerror"></span>
+     </div>
+     <div class="form-row">
+      <input type="text" maxlenght="20" placeholder="Enter company name" name="comp" id="comp" required>
+      <span id="comperror"></span>
+     </div>
+    <div class="form-row">
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>

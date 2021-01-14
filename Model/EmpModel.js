@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const validatr= require('express-validator');
+
 
 const schema = new mongoose.Schema({
     firstName: {
