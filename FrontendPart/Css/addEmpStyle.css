@@ -15,9 +15,6 @@ body {
     background-color: tomato;
 }
 
- 
-  
-  
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -33,10 +30,22 @@ body {
     display: flex;
     justify-content: center;
 }
+ 
+ 
+
+/**
+ * style input elements that have a required
+ * attribute and a focus state
+ */
+/* input:required:focus {
+  border: 1px solid red;
+  outline: none;
+} */
   
   .form-row {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
     padding: .5em;
     height: 60;
   }
@@ -59,7 +68,9 @@ body {
    border: 0;
    width: 100;
   }
- 
+ .spanclass{
+   color: red;
+ }
   
   
   

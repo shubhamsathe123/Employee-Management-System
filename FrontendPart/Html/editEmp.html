@@ -8,35 +8,35 @@
 </head>
 
 <body >   
-<form onsubmit="return validate()">
+<form >
   <div class="wrapper">   
       <h1 class="main">Edit Employee</h1>
     <div class="form-row">
       <input type="text" maxlength="20" placeholder="Enter first name" name="fname" id="fname" required>
-      <span id="firstnameerror"></span>
+      <span class="spanclass" id="firstnameerror"></span>
     </div>
     <div class="form-row">
           <input type="text" maxlength="20" placeholder="Enter last name" name="lname" id="lname" required>
-          <span id="lastnameerror"></span>
+          <span class="spanclass" id="lastnameerror"></span>
     </div>
     <div class="form-row">
           <input type="number" maxlength="13" placeholder="Enter mobile number" name="mob" id="mob" required>
-          <span id="phonenumerror"></span>
+          <span class="spanclass" id="phonenumerror"></span>
     </div>
     <div class="form-row">
       <input type="text" maxlenght="100" placeholder="Enter Email" name="email" id="email" required>
-      <span id="emailerror"></span>
+      <span class="spanclass" id="emailerror"></span>
     </div>
      <div class="form-row">
       <input type="text" maxlenght="20" placeholder="Enter designation" name="desig" id="desig" required>
-      <span id="desigerror"></span>
+      <span class="spanclass" id="desigerror"></span>
      </div>
      <div class="form-row">
       <input type="text" maxlenght="20" placeholder="Enter company name" name="comp" id="comp" required>
-      <span id="comperror"></span>
+      <span class="spanclass" id="comperror"></span>
      </div>
     <div class="form-row">
-      <button type="submit">Submit</button>
+      <button type="submit" onclick ="validate()">Submit</button>
     </div>
   </div>
 </form>

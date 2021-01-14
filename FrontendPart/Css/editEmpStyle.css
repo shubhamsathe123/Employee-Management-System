@@ -36,7 +36,8 @@ body {
   
   .form-row {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
     padding: .5em;
     height: 60;
   }
@@ -59,10 +60,8 @@ body {
    border: 0;
    width: 100;
   }
- 
-  
-  
-  
-  
+  .spanclass{
+    color: red;
+  }
   
   

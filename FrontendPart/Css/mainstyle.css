@@ -34,7 +34,9 @@ button{
     height: 40;
     }
            .res-tab{
-           overflow-x: auto;
+            overflow-x: auto;
+           width: 100px; 
+           
            }
            table{
                border-collapse: collapse;

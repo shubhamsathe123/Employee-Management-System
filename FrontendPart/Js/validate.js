@@ -1,4 +1,5 @@
 function validate() {
+    console.log("shubham sathe")
    var firstname = document.getElementById('fname').value;
    var lastname = document.getElementById('lname').value;
    var phoneNumber = document.getElementById('mob').value;
@@ -6,12 +7,12 @@ function validate() {
    var designation = document.getElementById('desig').value;
    var company =document.getElementById('comp').value;
    
-        FIRSTNAME = (`^[A-Z]{1}[a-z]{2,}$`);
-        LASTNAME = (`^[A-Z]{1}[a-z]{2,}$`);
-        MOBILE=('^([0-9]{1,3}[ ]+)?[0-9]{10}$');
-        EMAIL = ('^[a-zA-Z0-9]+([._+#][a-zA-Z0-9]+)*@[a-zA-Z1-9]+.[a-zA-Z]{2,4}(.[a-zA-Z]{2,3})?$');
-        DESIGNATION = (`^[A-Z]{1}[a-z]{2,}$`);
-        COMPANYNAME = (`^[A-Z]{1}[a-z]{2,}$`);
+       let FIRSTNAME = /^[A-Z]{1}[a-z]{2,}$/;
+       let LASTNAME = /^[A-Z]{1}[a-z]{2,}$/;
+      let  MOBILE=/^([0-9]{1,3}[ ]+)?[0-9]{10}$/;
+      let  EMAIL = /^[a-zA-Z0-9]+([._+#][a-zA-Z0-9]+)*@[a-zA-Z1-9]+.[a-zA-Z]{2,4}(.[a-zA-Z]{2,3})?$/;
+     let   DESIGNATION = /^[A-Z]{1}[a-z]{2,}$/;
+     let COMPANYNAME = /^[A-Z]{1}[a-z]{2,}$/;
        
        var firstNameResult = FIRSTNAME.test(firstname);
        var lastNameResult = LASTNAME.test(lastname);
@@ -38,5 +39,5 @@ function validate() {
     if (companyResult == false) {
         document.getElementById('comperror').innerHTML = "Invalid company name";
     }
-     return false;
+//    return false;
    }
