@@ -37,11 +37,14 @@ button{
             /* display: flex;
             overflow-x: auto;
            width: 100px;  */
-           width: 80%;
-    display: flex;
+           /* width: 80%; */
+    /* display: flex;
     align-items: start;
     flex-direction: column;
-    justify-content: start;
+    justify-content: start; */
+    overflow-y: auto;
+    width: 100%;
+    padding: 16px;
     /* overflow-x: auto; */
            }
            table{

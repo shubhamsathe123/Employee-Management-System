@@ -60,8 +60,13 @@ $( document ).ready(function() {
                  emp += '<td>' +
                     value.company + '</td>';
 
-                emp += '<td><button>Edit</button></td>';
-                emp += '<td><button>Delete</button></td>';
+                // emp += '<td> <button >Edit</button></td>';
+                // emp += '<td><button >Delete</button></td>';
+        //adding edit icon
+        emp += `<td><button class="update" src='../Html/editEmp.html' onclick="clicked('${value._id}')">Edit</button></td>`
+
+        //adding delete icon
+        emp += `<td><button class="del"   onclick="deleteOne('${value._id}')">Delete</button></td>`
 
                 "</tr>";
             });
@@ -70,4 +75,19 @@ $( document ).ready(function() {
         },
         error: (error) => { alert(error.message) }
       });  
+    }
+
+    const clicked = (id) => {
+      console.log(id)
+       location.replace("../Html/editEmp.html");
+     }
+
+     deleteOne = (id) => {
+    console.log(id)
+        $.ajax({
+            type: 'DELETE',
+            url: `http://localhost:3000/api/employee/delete/${id}`,
+        })
+    
+        window.open("../Html/main.html", "_self")
     }
