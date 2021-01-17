@@ -2,46 +2,56 @@
 
 <head>
     <title>AddEmployee</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../Css/addEmpStyle.css">
-    
-    
+    <link rel="stylesheet" href="../Css/addEmpStyle.css">   
+    <script src="../Js/addEmp.js"></script>
+    <script src='../Js/validate.js'></script>
 </head>
 
 <body >   
-<form >
+<form id='userform'>
   <div class="wrapper">   
       <h1 class="main">Add Employee</h1>
     <div class="form-row">
-      <input type="text" maxlength="20" placeholder="Enter first name" name="fname" id="fname"  required>
+      <input type="text" maxlength="20" placeholder="Enter first name" name="firstName" id="firstName"  required>
       <span class="spanclass" id="firstnameerror"></span>
     </div>
     <div class="form-row">
-          <input type="text" maxlength="20" placeholder="Enter last name" name="lname" id="lname" required>
+          <input type="text" maxlength="20" placeholder="Enter last name" name="lastName" id="lastName" required>
           <span class="spanclass" id="lastnameerror"></span>
     </div>
     <div class="form-row">
-          <input type="number" maxlength="13" placeholder="Enter mobile number" name="mob" id="mob" required>
+          <input type="tel" maxlength="13" placeholder="Enter mobile number" name="mobNo" id="mobNo" required>
           <span class="spanclass" id="phonenumerror"></span>
     </div>
     <div class="form-row">
-      <input type="text" maxlenght="100" placeholder="Enter Email" name="email" id="email" required>
+      <input type="email" maxlenght="100" placeholder="Enter Email" name="emailId" id="emailId" required>
       <span class="spanclass" id="emailerror"></span>
     </div>
      <div class="form-row">
-      <input type="text" maxlenght="20" placeholder="Enter designation" name="desig" id="desig" required>
+      <input type="text" maxlenght="20" placeholder="Enter designation" name="designation" id="designation" required>
       <span class="spanclass" id="desigerror"></span>
      </div>
      <div class="form-row">
-      <input type="text" maxlenght="20" placeholder="Enter company name" name="comp" id="comp" required>
+      <input type="text" maxlenght="20" placeholder="Enter company name" name="company" id="company" required>
       <span class="spanclass" id="comperror"></span>
      </div>
-    <div class="form-row">
-      <button type="submit" onclick ="validate()">Submit</button>
+     <div id="postResultDiv">
     </div>
+    <div class="form-row">
+      <button id='allusers'  onclick="checkandAdd()">Submit</button>
+      <script>
+        function checkandAdd() {
+          if (validate())
+          {
+           ajaxPost();
+          }
+        }  
+      </script>
+    </div> 
   </div>
 </form>
-<script src='../Js/validate.js'></script>
+
 </body>
 </html>

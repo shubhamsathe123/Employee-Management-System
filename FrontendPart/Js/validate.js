@@ -1,11 +1,11 @@
 function validate() {
     console.log("shubham sathe")
-   var firstname = document.getElementById('fname').value;
-   var lastname = document.getElementById('lname').value;
-   var phoneNumber = document.getElementById('mob').value;
-   var email = document.getElementById('email').value;
-   var designation = document.getElementById('desig').value;
-   var company =document.getElementById('comp').value;
+   var firstname = document.getElementById('firstName').value;
+   var lastname = document.getElementById('lastName').value;
+   var phoneNumber = document.getElementById('mobNo').value;
+   var email = document.getElementById('emailId').value;
+   var designation = document.getElementById('designation').value;
+   var company =document.getElementById('company').value;
    
        let FIRSTNAME = /^[A-Z]{1}[a-z]{2,}$/;
        let LASTNAME = /^[A-Z]{1}[a-z]{2,}$/;
@@ -23,21 +23,28 @@ function validate() {
             
        if (firstNameResult == false) {
            document.getElementById('firstnameerror').innerHTML = "Invalid First Name";
+           return false;
        }
        if (lastNameResult == false) {
            document.getElementById('lastnameerror').innerHTML = "Invalid Last Name";
+           return false;
        }
        if (phoneNumberResult == false) {
         document.getElementById('phonenumerror').innerHTML = "Invalid Phone Number";
      }
        if (emailResult == false) {
            document.getElementById('emailerror').innerHTML = "Invalid Email";
+           return false;
        }
        if (designationResult == false) {
         document.getElementById('desigerror').innerHTML = "Invalid designation";
+        return false;
     }
     if (companyResult == false) {
         document.getElementById('comperror').innerHTML = "Invalid company name";
+        return false;
+       
     }
-//    return false;
-   }
+    return true;
+    
+ }
