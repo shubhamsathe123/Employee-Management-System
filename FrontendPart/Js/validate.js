@@ -1,5 +1,4 @@
 function validate() {
-    console.log("shubham sathe")
    var firstname = document.getElementById('firstName').value;
    var lastname = document.getElementById('lastName').value;
    var phoneNumber = document.getElementById('mobNo').value;
@@ -31,6 +30,7 @@ function validate() {
        }
        if (phoneNumberResult == false) {
         document.getElementById('phonenumerror').innerHTML = "Invalid Phone Number";
+        return false;
      }
        if (emailResult == false) {
            document.getElementById('emailerror').innerHTML = "Invalid Email";

@@ -59,13 +59,10 @@ $( document ).ready(function() {
                     value.designation + '</td>';
                  emp += '<td>' +
                     value.company + '</td>';
-
-                // emp += '<td> <button >Edit</button></td>';
-                // emp += '<td><button >Delete</button></td>';
-        //adding edit icon
+                
         emp += `<td><button class="update" src='../Html/editEmp.html' onclick="clicked('${value._id}')">Edit</button></td>`
 
-        //adding delete icon
+
         emp += `<td><button class="del"   onclick="deleteOne('${value._id}')">Delete</button></td>`
 
                 "</tr>";
@@ -77,9 +74,10 @@ $( document ).ready(function() {
       });  
     }
 
-    const clicked = (id) => {
+     clicked = (id) => {
       console.log(id)
        location.replace("../Html/editEmp.html");
+       sessionStorage.setItem('var',id);
      }
 
      deleteOne = (id) => {

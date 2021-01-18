@@ -32,9 +32,10 @@ function ajaxPost(){
             contentType : "application/json",
             data : JSON.stringify(formdata),
             success : function(newdata) {
-               alert(newdata.message)
+               alert(newdata.message);
             },
-            error: (error) => { alert(error.message) }
+            error: (error) => {
+               alert(error.message) }
         })
     
 }
